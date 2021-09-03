@@ -10,14 +10,14 @@ namespace BaiTap.Misa.API.Controllers
 {
     [Route("api/v1/[controller]")]
     [ApiController]
-    public class DepartmentController : BaseController<Department>
+    public class DepartmentsController : BaseController<Department>
     {
         #region Declare
         private readonly IDepartmentService _departmentService;
         #endregion
 
         #region Constructor
-        public DepartmentController(IBaseService<Department> baseService, IDepartmentService departmentService) : base(baseService)
+        public DepartmentsController(IBaseService<Department> baseService, IDepartmentService departmentService) : base(baseService)
         {
             this._departmentService = departmentService;
         }

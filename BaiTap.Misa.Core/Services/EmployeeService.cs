@@ -40,7 +40,7 @@ namespace BaiTap.Misa.Core.Services
         /// </summary>
         /// <returns>Kết quả sinh mã mới</returns>
         
-        public ServiceResult GetNewEmployeeCode()
+        public ServiceResult GetNewCode()
         {
             ServiceResult serviceResult = new ServiceResult();
             serviceResult.MoreInfo = Properties.Resources.GET;

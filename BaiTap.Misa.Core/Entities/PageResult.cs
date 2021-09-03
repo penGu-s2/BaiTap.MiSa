@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BaiTap.Misa.Core.Entities
 {
-    public class PageResult<
+    public class PageResult<T>
     {
         /// <summary>
         /// Thứ tự trạng

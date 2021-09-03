@@ -1,3 +1,7 @@
+using BaiTap.Misa.Core.Interfaces.Repository;
+using BaiTap.Misa.Core.Interfaces.Service;
+using BaiTap.Misa.Core.Repositories;
+using BaiTap.Misa.Core.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -28,7 +32,13 @@ namespace BaiTap.Misa.API
         {
 
             services.AddControllers();
-            
+            services.AddScoped(typeof(IBaseRepository<>), typeof(BaseRepository<>));
+            services.AddScoped(typeof(IBaseService<>), typeof(BaseService<>));
+            services.AddScoped<IEmployeeService, EmployeeService>();
+            services.AddScoped<IEmployeeRepository, EmployeeRepository>();
+
+            services.AddScoped<IDepartmentService, DepartmentService>();
+            services.AddScoped<IDepartmentRepository, DepartmentRepository>();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "BaiTap.Misa.API", Version = "v1" });

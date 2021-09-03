@@ -14,7 +14,7 @@ namespace BaiTap.Misa.Core.Interfaces.Service
         /// Tạo mã nhân viên mưới
         /// </summary>
         /// <returns>Kết quả dịch vụ sinh mã mới</returns>
-        public ServiceResult GetNewEmployeeCode();
+        public ServiceResult GetNewCode();
 
         /// <summary>
         /// Phân trang tìmkieesm nhân viên
